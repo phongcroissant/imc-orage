@@ -1,0 +1,15 @@
+{
+    "name": "phong/imc-orage",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Phong NGUYEN",
+            "email": "phongnguyen25000@gmail.com"
+        }
+    ],
+    "require": {}
+}
