@@ -1,7 +1,8 @@
 <?php
-namespace App\Controllers;
+namespace App\Controller;
 
-use App\ImcModele\ImcModele;
+
+use App\Modele\ImcModele;
 
 class ImcController {
     public function requete() {

@@ -1,5 +1,5 @@
 <?php
-namespace App\ImcModele;
+namespace App\Modele;
 
 class ImcModele {
     public function calculerImc($poids, $taille) {

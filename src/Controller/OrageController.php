@@ -1,13 +1,23 @@
 <?php
-namespace App\Modele;
+namespace App\Controller;
 
-class OrageModele {
-    public function calculerDistance($temps) {
-        // La vitesse du son est d'environ 343 m/s
-        $vitesseSon = 343;
+use App\Modele\OrageModele;
 
-        // Calcul de la distance (distance = temps * vitesse du son)
-        return round($temps * $vitesseSon, 2);
+class OrageController {
+    public function requete() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $temps = $_POST['temps'];
+
+            // Instancier le modèle et calculer la distance
+            $model = new OrageModele();
+            $distance = $model->calculerDistance($temps);
+
+            // Passer la variable $distance à la vue
+            require __DIR__ . '/../views/resultatOrage.php';
+        } else {
+            // Afficher le formulaire
+            require __DIR__ . '/../views/orageVue.php';
+        }
     }
 }
 ?>
